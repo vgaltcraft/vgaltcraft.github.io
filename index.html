@@ -16,17 +16,19 @@
 <script>
      alert("Hello1");
 function click(){
+     alert("Hello3");
     var akPush = new AKPush()
     try {
         console.log("click OK")
         akPush.initSubscription();
+         
 
     } catch (e) {
         console.log("error:",e)
     }
 }
 function onClick(){
-     alert("Hello2");
+     alert("Hello3");
     console.log("click OK")
     var akPush = new AKPush();
     akPush.initSubscription();
