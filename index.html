@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8" />
-  <title>HTML5</title>
-  <!--[if IE]>
-   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  
-  <style>
-   article, aside, details, figcaption, figure, footer,header,
-   hgroup, menu, nav, section { display: block; }
-  </style>
- </head>
- <body>
-  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
-  <script src="https://pxl.altcraft.vasily-grishin.lan/ak_container.js?id=MnwxNQ.." ></script>
- <link rel="manifest" href="/manifest.json"></link>
+<head>
+<meta charset="utf-8">
+<title>qweqwe</title>
+</head>
+<body bgcolor="white">
+<h1>Test Page</h1>
+<script src="https://pxl.daria-markina.dev.altkraft.com/ak_container.js?id=MXwz" ></script>
 <!--  <link rel="manifest" href="/manifest.json"></link>-->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <!--<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script> -->
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-
-  
-  <p>Привет, мир</p>
- 
- <button id="init_sub">Подписаться на уведомления</button> // Кнопка подписки
- 
 <script>
-    document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
+function click(){
+    var akPush = new AKPush()
     try {
-        var akPush = new AKPush();
-        akPush.initSubscription() // ..показать форму подписки
-        }
-    catch (e) {
-        console.log(e); // Или записать ошибку в консоль браузера
-        }
-    });
-</script>
- 
- </body>
+        console.log("click OK")
+        akPush.initSubscription();
+
+    } catch (e) {
+        console.log("error:",e)
+    }
+}
+function onClick(){
+
+    console.log("click OK")
+    var akPush = new AKPush();
+    akPush.initSubscription();
+}
+</script> 
+<p><input type="button" value="Проверить" onclick="click()"></p>
+
+</body>
 </html>
