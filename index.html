@@ -47,5 +47,20 @@ function onClick(){
 <p><input type="button" value="Проверить" onclick="click()"></p>
   
   <p>Привет, мир</p>
+ 
+ <button id="init_sub">Подписаться на уведомления</button> // Кнопка подписки
+ 
+<script>
+    document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
+    try {
+        var akPush = new AKPush();
+        akPush.initSubscription() // ..показать форму подписки
+        }
+    catch (e) {
+        console.log(e); // Или записать ошибку в консоль браузера
+        }
+    });
+</script>
+ 
  </body>
 </html>
